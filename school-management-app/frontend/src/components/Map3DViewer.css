@@ -1,0 +1,101 @@
+.map-viewer-container {
+  width: 100%;
+  min-height: 80vh;
+  background: var(--surface);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-viewer-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%);
+  color: white;
+  text-align: center;
+}
+
+.map-viewer-header h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+.map-viewer-header p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.map-canvas {
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(to bottom, #87ceeb 0%, #f0f8ff 100%);
+}
+
+.map-controls-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  background: var(--background);
+  border-top: 1px solid var(--border);
+}
+
+.control-item {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.control-item strong {
+  color: var(--text-primary);
+  margin-right: 0.5rem;
+}
+
+.house-legend {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--border);
+}
+
+.house-legend h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+}
+
+.legend-items {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .map-canvas {
+    height: 400px;
+  }
+
+  .map-controls-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .legend-items {
+    justify-content: center;
+  }
+
+  .map-viewer-header h2 {
+    font-size: 1.5rem;
+  }
+}
